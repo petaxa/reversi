@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Othello</title>
+    <style>
+        .field {
+            display: flex;
+            justify-content: center;
+        }
+        td {
+            width: 80px;
+            height: 80px;
+            border:solid 1px black;
+            text-align: center;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="turnMsg">オセロ</h1>
+    <select id="selectTemp">
+        <option value="0">ウサギ定石</option>
+        <option value="1">トラ定石</option>
+        <option value="2">牛定石</option>
+        <option value="3">ネズミ定石</option>
+        <option value="4">定石なし</option>
+    </select>
+    <select id="selectTurn">
+        <option value="0">ユーザー先行</option>
+        <option value="1">ユーザー後攻</option>
+        <option value="2">対人戦</option>
+    </select>
+    <button id="gameStart">対局開始</button>
+    <div id="field" class="hide"></div>
+    <div id="err"></div>
+    <button id="kifu">棋譜出力</button>
+</body>
+<script src="script.js"></script>
+</html>
